@@ -1,0 +1,120 @@
+@import "blocks/_header.scss";
+
+@font-face {
+  font-family: "Lato-400";
+  src: url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato-700";
+  src: url("../fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-400";
+  src: url("../fonts/Roboto.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-500";
+  src: url("../fonts/Roboto.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-700";
+  src: url("../fonts/Roboto.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-family-400: "Roboto-400", sans-serif;
+  --font-family-500: "Roboto-500", sans-serif;
+  --font-family-700: "Roboto-700", sans-serif;
+  --second-family-400: "Lato-400", sans-serif;
+  --second-family-700: "Lato-700", sans-serif;
+  --accent-primary: #ED4C5C;
+  --accent-secondary: #EE3D1B;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 1s all;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 1440px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(1rem, 2vw, 2rem);
+  column-gap: 30px;
+  padding-inline: 168px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-inline: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  html {
+    font-size: 12px;
+  }
+
+  .container {
+    padding-inline: 27px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  html {
+    font-size: 10px;
+  }
+
+  .container {
+    padding-inline: 11px;
+    column-gap: 0;
+  }
+}
+
+@media screen and (max-width: 373px) {
+  html {
+    font-size: 8px;
+  }
+
+}
