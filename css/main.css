@@ -91,7 +91,6 @@
   margin-top: 22px;
   font-family: var(--font-family-400);
   font-size: 14px;
-  color: var(--accent-primary);
   border-radius: 6px;
   width: 160px;
   height: 50px;
@@ -133,6 +132,63 @@
 @media screen and (max-width: 373px) {
   .header {
     height: 630px;
+  }
+}
+.description {
+  padding-block: 93px;
+}
+.description .description__container {
+  row-gap: 50px;
+}
+.description .description__container .description__text {
+  grid-column: 1/6;
+  padding-top: 2rem;
+}
+.description .description__container .description__text h2 {
+  font-family: var(--font-family-500);
+  font-size: 2.25rem;
+  margin-bottom: 3rem;
+}
+.description .description__container .description__text p {
+  font-family: var(--font-family-400);
+  font-size: 0.875rem;
+  line-height: 140%;
+  text-align: justify;
+  margin-bottom: 0.9rem;
+}
+.description .description__container .description__text a {
+  font-family: var(--font-family-400);
+  font-size: 0.875rem;
+  line-height: 140%;
+  text-align: justify;
+}
+.description .description__video {
+  grid-column: 7/12;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.description .description__video img {
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .description .description__container .description__text,
+  .description .description__video {
+    grid-column: 1/13;
+  }
+}
+@media screen and (max-width: 767px) {
+  .description .description__container .description__text p,
+  .description .description__container .description__text a {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .description .description__container .description__text p,
+  .description .description__container .description__text a {
+    font-size: 1.2rem;
   }
 }
 @font-face {
@@ -196,6 +252,14 @@ html {
 
 button {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.color-red {
+  color: var(--accent-primary);
 }
 
 .container {
