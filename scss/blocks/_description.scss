@@ -10,13 +10,11 @@
 
       h2 {
         font-family: var(--font-family-500);
-        font-size: 2.25rem;
         margin-bottom: 3rem;
       }
 
       p {
         font-family: var(--font-family-400);
-        font-size: 0.875rem;
         line-height: 140%;
         text-align: justify;
         margin-bottom: 0.9rem;
@@ -24,7 +22,6 @@
 
       a {
         font-family: var(--font-family-400);
-        font-size: 0.875rem;
         line-height: 140%;
         text-align: justify;
       }
@@ -53,29 +50,5 @@
   .description .description__container .description__text,
   .description .description__video {
     grid-column: 1/13;
-  }
-
-  .description .description__container .description__text p,
-  .description .description__container .description__text a {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 767px) {
-
-  .description .description__container .description__text p,
-  .description .description__container .description__text a {
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .description .description__container .description__text h2 {
-    font-size: 3rem;
-  }
-
-  .description .description__container .description__text p,
-  .description .description__container .description__text a {
-    font-size: 1.5rem;
   }
 }

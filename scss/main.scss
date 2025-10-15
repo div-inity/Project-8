@@ -77,6 +77,11 @@ a {
   color: var(--accent-primary);
 }
 
+h2 {
+
+  font-size: 2.25rem;
+}
+
 .container {
   margin-inline: auto;
   max-width: 1440px;
@@ -88,15 +93,29 @@ a {
   padding-inline: 168px;
 }
 
+.size-14 {
+  font-size: 0.875rem;
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     padding-inline: 50px;
   }
 }
 
+@media screen and (max-width: 992px) {
+  .size-14 {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 767px) {
   html {
     font-size: 14px;
+  }
+
+  .size-14 {
+    font-size: 1.2rem;
   }
 }
 
@@ -107,6 +126,14 @@ a {
 
   .container {
     padding-inline: 27px;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .size-14 {
+    font-size: 1.5rem;
   }
 }
 
