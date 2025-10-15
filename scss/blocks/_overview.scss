@@ -1,0 +1,109 @@
+.overview {
+  background: #fafafa;
+  padding-bottom: 229px;
+  padding-top: 3.9375rem;
+
+  .overview__container {
+    h2 {
+      grid-column: 1 / 13;
+      text-align: center;
+      margin-bottom: 2.75rem;
+    }
+
+    .overview__card {
+      grid-column: span 4;
+
+      &:nth-of-type(1) .overview__card__wrapper {
+        background-image: url(../img/Bg1.svg);
+      }
+
+      &:nth-of-type(2) .overview__card__wrapper {
+        background-image: url(../img/Bg2.svg);
+      }
+
+      &:nth-of-type(3) .overview__card__wrapper {
+        background-image: url(../img/Bg3.svg);
+      }
+
+      .overview__card__wrapper {
+        border-radius: 8px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 45%;
+
+        .overview__card__text {
+          box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+          width: 83%;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          padding: 26px 32px;
+          align-items: center;
+          background: #fff;
+          border-radius: 8px;
+
+          h3 {}
+
+          p {
+            text-align: center;
+            line-height: 150%;
+          }
+
+          a {}
+        }
+
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .overview .overview__container .overview__card:nth-of-type(1) {
+    grid-column: span 5;
+  }
+
+  .overview .overview__container .overview__card:nth-of-type(2) {
+    grid-column: 8 / span 5;
+    grid-row: 3;
+  }
+
+  .overview .overview__container .overview__card:nth-of-type(3) {
+    grid-column: span 5;
+    grid-row: 4;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .overview .overview__container .overview__card:nth-of-type(1) {
+    grid-column: span 6;
+  }
+
+  .overview .overview__container .overview__card:nth-of-type(2) {
+    grid-column: 7 / span 6;
+  }
+
+  .overview .overview__container .overview__card:nth-of-type(3) {
+    grid-column: span 6;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .overview__card {
+    grid-column: span 12 !important;
+  }
+
+  .overview .overview__container .overview__card .overview__card__wrapper {
+    background-size: contain;
+    height: auto;
+    width: 100%;
+  }
+
+  .overview__container {
+    row-gap: 6rem;
+  }
+}

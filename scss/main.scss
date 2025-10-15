@@ -1,5 +1,6 @@
 @import "blocks/_header.scss";
 @import "blocks/_description.scss";
+@import "blocks/_overview.scss";
 
 @font-face {
   font-family: "Lato-400";
@@ -71,6 +72,11 @@ button {
 
 a {
   text-decoration: none;
+  font-family: var(--font-family-400);
+}
+
+p {
+  font-family: var(--font-family-400);
 }
 
 .color-red {
@@ -78,8 +84,15 @@ a {
 }
 
 h2 {
-
+  font-family: var(--font-family-500);
   font-size: 2.25rem;
+}
+
+h3 {
+  font-family: var(--font-family-500);
+  font-size: 1.125rem;
+  color: #101010;
+  text-align: center;
 }
 
 .container {
@@ -93,6 +106,10 @@ h2 {
   padding-inline: 168px;
 }
 
+.size-12 {
+  font-size: 0.75rem;
+}
+
 .size-14 {
   font-size: 0.875rem;
 }
@@ -104,6 +121,10 @@ h2 {
 }
 
 @media screen and (max-width: 992px) {
+  .size-12 {
+    font-size: .85rem;
+  }
+
   .size-14 {
     font-size: 1rem;
   }
@@ -132,6 +153,14 @@ h2 {
     font-size: 3rem;
   }
 
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .size-12 {
+    font-size: .95rem;
+  }
+
   .size-14 {
     font-size: 1.5rem;
   }
@@ -145,6 +174,14 @@ h2 {
   .container {
     padding-inline: 11px;
     column-gap: 0;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .size-12 {
+    font-size: 1.4rem;
   }
 }
 
