@@ -1,0 +1,77 @@
+.download {
+  background-color: var(--accent-primary);
+  padding-block: 5.8125rem;
+
+  .download__text {
+    color: #fff;
+    grid-column: span 5;
+    padding-top: 1.8rem;
+
+    h2 {}
+
+    p {
+      line-height: 140%;
+      text-align: justify;
+      margin-top: 3rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      margin-top: 2.7rem;
+
+      * {
+        background-repeat: no-repeat;
+        width: 32px;
+        aspect-ratio: 1/1;
+        border: unset;
+        background-color: transparent;
+      }
+
+      .actions__icon__playstore {
+        background-image: url(../img/playstore.svg);
+      }
+
+      .actions__icon__appstore {
+        background-image: url(../img/appstore.svg);
+      }
+    }
+  }
+
+  figure {
+    grid-column: 7 / span 5;
+
+    .download_image {}
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .download .download__text {
+    grid-column: span 7;
+  }
+
+  .download figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 8 / span 7;
+  }
+
+  .download_image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .download .download__text {
+    grid-column: span 12;
+    grid-row: 3;
+  }
+
+  .download figure {
+    grid-column: span 12;
+    grid-row: 2;
+  }
+}
