@@ -404,7 +404,7 @@
 }
 .contact {
   padding-top: 9.875rem;
-  padding-bottom: 7.6875rem;
+  padding-bottom: 8.5rem;
 }
 .contact .contact__container .contact__text {
   grid-column: span 5;
@@ -462,6 +462,25 @@
     font-size: 1.5rem;
   }
 }
+footer {
+  background: #fafafa;
+}
+footer .footer__container .footer__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-column: span 12;
+  font-style: normal;
+  padding-block: 45px;
+}
+footer .footer__container .footer__text h3 {
+  margin-bottom: 1.1875rem;
+}
+footer .footer__container .footer__text p:first-of-type {
+  line-height: 150%;
+  margin-bottom: 2.8125rem;
+}
+
 @font-face {
   font-family: "Lato-400";
   src: url("../fonts/Lato-Regular.ttf") format("truetype");
