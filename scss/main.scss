@@ -5,6 +5,7 @@
 @import "blocks/_download.scss";
 @import "blocks/_contact.scss";
 @import "blocks/_footer.scss";
+@import "blocks/_aside.scss";
 
 @font-face {
   font-family: "Lato-400";
@@ -137,6 +138,8 @@ h3 {
 .size-14 {
   font-size: 0.875rem;
 }
+
+
 
 @media screen and (max-width: 1200px) {
   .container {

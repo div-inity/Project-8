@@ -16,10 +16,10 @@
         <a href="" class="header__logo">cloudbudget</a>
         <nav class="header__nav">
           <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link">обзор</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">особенности</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">технология</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">контакты</a></li>
+            <li class="nav__item"><a href="#description" class="nav__link">обзор</a></li>
+            <li class="nav__item"><a href="#overview" class="nav__link">особенности</a></li>
+            <li class="nav__item"><a href="#features" class="nav__link">технология</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">контакты</a></li>
             <li class="nav__item"><a href="#" class="nav__link">войти</a></li>
           </ul>
         </nav>
@@ -37,7 +37,7 @@
     </div>
   </header>
   <main>
-    <section class="description">
+    <section class="description" id="description">
       <div class="container description__container">
         <article class="description__text">
           <h2>Простое приложение для управления бюджетом</h2>
@@ -52,7 +52,7 @@
         </figure>
       </div>
     </section>
-    <section class="overview">
+    <section class="overview" id="overview">
       <div class="container overview__container">
         <h2>Возможности</h2>
         <article class="overview__card">
@@ -86,7 +86,7 @@
         </article>
       </div>
     </section>
-    <section class="features">
+    <section class="features" id="features">
       <div class="container features__container">
         <h2>Технологии</h2>
         <article class="feature">
@@ -134,7 +134,7 @@
         <figure><img src="img/download.svg" alt="" class="download_image"></figure>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="container contact__container">
         <article class="contact__text">
           <h2>Напишите нам</h2>
@@ -161,6 +161,42 @@
       </address>
     </div>
   </footer>
+  <aside>
+    <button class="aside-button__menu-close"></button>
+    <a href="" class="aside__logo">cloudbudget</a>
+    <nav class="aside__nav">
+      <ul class="nav__list aside__nav__list">
+        <li class="nav__item"><a href="#description" class="nav__link">обзор</a></li>
+        <li class="nav__item"><a href="#overview" class="nav__link">особенности</a></li>
+        <li class="nav__item"><a href="#features" class="nav__link">технология</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link">контакты</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="aside__login" aria-label="Кнопка войти">вход</button>
+  </aside>
+  <script>
+    const closeMenu = document.querySelector('.aside-button__menu-close');
+    const openMenu = document.querySelector('.header-button__menu-open');
+    const navLinks = document.querySelectorAll('.nav__link');
+    const aside = document.querySelector('aside');
+    function openAside() {
+      console.log('вызов aside')
+      console.log(aside)
+      aside.classList.add('openned');
+    }
+
+    function closeAside() {
+      console.log('закрытие aside')
+      aside.classList.remove('openned');
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeAside);
+    });
+
+    openMenu.addEventListener('click', openAside);
+    closeMenu.addEventListener('click', closeAside);
+  </script>
 </body>
 
 </html>

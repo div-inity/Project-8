@@ -1,0 +1,110 @@
+aside {
+  display: none;
+  width: 0;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: #333;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  text-transform: uppercase;
+  padding-top: 4rem;
+
+  &.openned {
+    width: 100vw;
+    display: flex;
+  }
+
+  .aside-button__menu-close {
+    background-image: url(../img/close.svg);
+    background-size: contain;
+    height: 3rem;
+    aspect-ratio: 1 / 1;
+    background-color: transparent;
+    border: none;
+    filter: invert(1);
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  .aside__logo {
+    font-family: var(--second-family-700);
+    font-size: 18px;
+    color: white;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 25px;
+      aspect-ratio: 1/1;
+      background-image: url(../img/cloud.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-y: bottom;
+      margin-right: 8px;
+    }
+  }
+
+  .aside__nav {
+    display: flex;
+    align-items: center;
+
+    .aside__nav__list {
+      flex-direction: column !important;
+
+    }
+
+    .nav__list {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-direction: row;
+      width: 100vw;
+      text-align: center;
+
+      .nav__item {
+
+        .nav__link {
+          font-family: var(--font-family-500);
+          font-size: 14px;
+          position: relative;
+          color: white;
+
+          &:hover::before {
+            transform: scaleX(1);
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            background-color: white;
+            height: 1px;
+            bottom: -7px;
+            transform: scaleX(0);
+          }
+        }
+      }
+    }
+  }
+
+  .aside__login {
+    font-family: var(--font-family-400);
+    font-size: 14px;
+    border-radius: 6px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+
+    &:hover {
+      background: var(--accent-primary);
+
+    }
+  }
+}

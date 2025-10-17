@@ -499,6 +499,100 @@ footer .footer__container .footer__text p:first-of-type {
   margin-bottom: 2.8125rem;
 }
 
+aside {
+  display: none;
+  width: 0;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: #333;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  text-transform: uppercase;
+  padding-top: 4rem;
+}
+aside.openned {
+  width: 100vw;
+  display: flex;
+}
+aside .aside-button__menu-close {
+  background-image: url(../img/close.svg);
+  background-size: contain;
+  height: 3rem;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  border: none;
+  filter: invert(1);
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+aside .aside__logo {
+  font-family: var(--second-family-700);
+  font-size: 18px;
+  color: white;
+}
+aside .aside__logo::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  aspect-ratio: 1/1;
+  background-image: url(../img/cloud.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: bottom;
+  margin-right: 8px;
+}
+aside .aside__nav {
+  display: flex;
+  align-items: center;
+}
+aside .aside__nav .aside__nav__list {
+  flex-direction: column !important;
+}
+aside .aside__nav .nav__list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  width: 100vw;
+  text-align: center;
+}
+aside .aside__nav .nav__list .nav__item .nav__link {
+  font-family: var(--font-family-500);
+  font-size: 14px;
+  position: relative;
+  color: white;
+}
+aside .aside__nav .nav__list .nav__item .nav__link:hover::before {
+  transform: scaleX(1);
+}
+aside .aside__nav .nav__list .nav__item .nav__link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  height: 1px;
+  bottom: -7px;
+  transform: scaleX(0);
+}
+aside .aside__login {
+  font-family: var(--font-family-400);
+  font-size: 14px;
+  border-radius: 6px;
+  width: 100px;
+  height: 40px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+aside .aside__login:hover {
+  background: var(--accent-primary);
+}
+
 @font-face {
   font-family: "Lato-400";
   src: url("../fonts/Lato-Regular.ttf") format("truetype");
