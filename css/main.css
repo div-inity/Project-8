@@ -3,7 +3,7 @@
   background-image: url(../img/Bg.jpg);
   background-position-x: center;
   background-repeat: no-repeat;
-  height: 782px;
+  height: 48.875rem;
 }
 .header * {
   color: white;
@@ -15,12 +15,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-block: 50px;
+  padding-block: 3.125rem;
 }
 .header .header__head .header-button__menu-open {
   background-image: url(../img/menu.svg);
   background-size: contain;
-  height: 48px;
+  height: 3rem;
   aspect-ratio: 1/1;
   background-color: transparent;
   border: none;
@@ -81,8 +81,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  padding-top: 85px;
+  gap: 2.5rem;
+  padding-top: 5.3125rem;
 }
 .header .header__text h1 {
   font-family: var(--font-family-700);
@@ -99,7 +99,7 @@
 }
 .header .header__cta {
   grid-column: 6/8;
-  margin-top: 22px;
+  margin-top: 1.375rem;
   font-family: var(--font-family-400);
   font-size: 14px;
   border-radius: 6px;
@@ -129,20 +129,23 @@
   }
 }
 @media screen and (max-width: 575px) {
+  .header {
+    height: 51.875rem;
+  }
   .header .header__text {
-    gap: 60px;
+    gap: 5rem;
   }
   .header .header__text p {
     font-size: 2rem;
   }
   .header .header__cta {
-    margin-top: 60px;
+    margin-top: 5rem;
   }
 }
 @media screen and (max-width: 373px) {
-  .header {
+  /* .header {
     height: 630px;
-  }
+  } */
 }
 .description {
   padding-block: 95px;
@@ -179,7 +182,7 @@
 
 @media screen and (max-width: 992px) {
   .description {
-    padding-block: 60px;
+    padding-block: 3.75rem;
   }
   .description .description__container .description__text,
   .description .description__video {
@@ -188,7 +191,7 @@
 }
 .overview {
   background: #fafafa;
-  padding-bottom: 229px;
+  padding-bottom: 14.2125rem;
   padding-top: 3.9375rem;
 }
 .overview .overview__container h2 {
