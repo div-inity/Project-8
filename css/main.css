@@ -55,15 +55,26 @@
 .header .header__head .header__nav .nav__list .nav__item .nav__link {
   font-family: var(--font-family-500);
   font-size: 14px;
+  position: relative;
+}
+.header .header__head .header__nav .nav__list .nav__item .nav__link:hover::before {
+  transform: scaleX(1);
+}
+.header .header__head .header__nav .nav__list .nav__item .nav__link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  height: 1px;
+  bottom: -7px;
+  transform: scaleX(0);
 }
 .header .header__head .header__login {
   font-family: var(--font-family-400);
   font-size: 14px;
-  border: 1px solid #fff;
   border-radius: 6px;
   width: 100px;
   height: 40px;
-  background-color: transparent;
 }
 .header .header__text {
   grid-column: 4/10;
@@ -94,7 +105,6 @@
   border-radius: 6px;
   width: 160px;
   height: 50px;
-  background: #fff;
   border: none;
 }
 
@@ -446,6 +456,11 @@
   border-radius: 6px;
   color: white;
 }
+.contact .contact__container .contact__form button:hover {
+  background: transparent;
+  color: var(--accent-primary);
+  outline: 1px solid var(--accent-primary);
+}
 
 @media screen and (max-width: 767px) {
   .contact .contact__container .contact__text {
@@ -579,6 +594,24 @@ h3 {
   -moz-column-gap: 30px;
        column-gap: 30px;
   padding-inline: 168px;
+}
+
+.white-button {
+  background: #fff;
+}
+.white-button:hover {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: white;
+}
+
+.red-button {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.red-button:hover {
+  background: #fff;
+  color: var(--accent-primary);
 }
 
 .size-12 {

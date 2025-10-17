@@ -110,6 +110,26 @@ h3 {
   padding-inline: 168px;
 }
 
+.white-button {
+  background: #fff;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: white;
+  }
+}
+
+.red-button {
+  background-color: transparent;
+  border: 1px solid #fff;
+
+  &:hover {
+    background: #fff;
+    color: var(--accent-primary);
+  }
+}
+
 .size-12 {
   font-size: 0.75rem;
 }

@@ -45,6 +45,12 @@
         border: unset;
         border-radius: 6px;
         color: white;
+
+        &:hover {
+          background: transparent;
+          color: var(--accent-primary);
+          outline: 1px solid var(--accent-primary);
+        }
       }
     }
   }
